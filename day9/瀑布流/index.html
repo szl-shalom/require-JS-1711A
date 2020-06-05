@@ -1,0 +1,118 @@
+<!--
+ * @Description: This is a JS program !scr
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-10 18:44:22
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-11 16:26:10
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #555;
+        }
+
+        .box {
+            width: 1000px;
+            margin: auto;
+            position: relative;
+            background: #555;
+        }
+
+        .box div {
+            position: absolute;
+            width: 200px;
+            padding: 6px;
+            box-shadow: 0 0 2px 2px #ccc;
+        }
+
+        .box div img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div><img src="img/1.jpg" alt=""></div>
+        <div><img src="img/2.jpg" alt=""></div>
+        <div><img src="img/3.jpg" alt=""></div>
+        <div><img src="img/4.jpg" alt=""></div>
+        <div><img src="img/5.jpg" alt=""></div>
+          <!--   <div><img src="img/6.jpg" alt=""></div>
+        <div><img src="img/7.jpg" alt=""></div>
+        <div><img src="img/8.jpg" alt=""></div>
+        <div><img src="img/9.jpg" alt=""></div>
+        <div><img src="img/10.jpg" alt=""></div>
+      <div><img src="img/11.jpg" alt=""></div>
+      <div><img src="img/12.jpg" alt=""></div>
+         <div><img src="img/13.jpg" alt=""></div>
+        <div><img src="img/14.jpg" alt=""></div>
+        <div><img src="img/15.jpg" alt=""></div> -->
+    </div>
+    <script src="../../day6/迷你版轮播/lib/velocity.min.js"></script>
+    <script>
+
+        var box = document.querySelector(".box");
+
+        var len = Math.floor(box.offsetWidth / box.children[0].offsetWidth);
+        var w = box.children[0].offsetWidth;
+        // 设置样式
+        function setStyle() {
+            var arr = [];
+            [...box.children].forEach((item, index) => {
+                if (index < len) {
+                    item.style.left = index * (w + 10) + "px";
+                    item.style.top = 0;
+                    arr.push(item.offsetHeight)
+                } else {
+                    var minH = Math.min.apply(null, arr)
+                    var index = arr.indexOf(minH)
+                    item.style.left = index * (w + 10) + "px";
+                    item.style.top = arr[index] + 10 + "px";
+                    arr[index] = arr[index] + 10 + item.offsetHeight
+                }
+            })
+            Velocity(box, "fadeIn")
+
+        }
+
+        window.onload = function () {
+            setStyle(0)
+        }
+        window.onscroll = e => {
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            var t = document.documentElement.scrollTop;
+            var c = document.documentElement.clientHeight;
+            if (t + c > box.children[box.children.length - 1].offsetTop) {
+                for (var i = 0; i <= 14; i++) {
+                    var div = document.createElement("div")
+                    div.innerHTML = `
+                   <img src="img/${i + 1}.jpg" alt="">
+                    `
+                    box.appendChild(div)
+                }
+                setStyle()
+            }
+        }
+    </script>
+</body>
+
+</html>

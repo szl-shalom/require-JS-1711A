@@ -1,0 +1,66 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-03 20:18:42
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-04 11:33:45
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            top: 50px;
+            left: 500px;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button>开始动画</button>
+    <button>暂定动画</button>
+    <button>继续动画</button>
+    <button>取消动画</button>
+    <button>完成动画</button>
+    <script src="./lib/velocity.min.js"></script>
+    <script>
+        var V = Velocity
+        var div = document.querySelector("div")
+        var btns = document.querySelectorAll("button");
+        btns[0].onclick = function () {
+            V(div, {
+                height: 600,
+                width: 600,
+            }, 2000)
+        }
+
+        btns[1].onclick = function () {
+            V(div, "pause") //暂定
+        }
+
+        btns[2].onclick = function () {
+            V(div, "resume")//继续
+        }
+
+        btns[3].onclick = function () {
+            V(div, "stop")// 停止订花
+        }
+        btns[4].onclick = function () {
+            V(div, "finish")// 完成动画
+        }
+    </script>
+</body>
+
+</html>

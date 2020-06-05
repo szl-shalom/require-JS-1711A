@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .content {
+        width: 600px;
+        height: 600px;
+        border: 1px solid #350;
+        margin: 0 auto;
+    }
+
+    ul>li {
+        width: 100px;
+        height: 40px;
+        float: left;
+        position: relative;
+
+    }
+
+    ol {
+        width: 300px;
+        height: auto;
+        background: #ccc;
+        position: absolute;
+        z-index: 100;
+        display: none;
+
+
+    }
+
+
+    ol li {
+        display: inline-flex;
+
+
+    }
+    .box{
+        display: none;
+        width:500px;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <input type="" placeholder="请选择地区" class="search">
+    <div class="box">
+        <div class="header">
+            <button class="clear">清空</button>
+            <button class="check-all">全选</button>
+        </div>
+
+        <div class="content">
+            <ul>
+                <li>
+                    <input type="checkbox" class="parent-check">
+                    黑龙江
+                    <ol>
+                        <li><input type="checkbox">哈尔滨</li>
+                        <li><input type="checkbox">牡丹江</li>
+                        <li><input type="checkbox">齐齐哈尔</li>
+                        <li><input type="checkbox">双鸭山</li>
+                        <li><input type="checkbox">哈尔滨</li>
+                        <li><input type="checkbox">牡丹江</li>
+                        <li><input type="checkbox">齐齐哈尔</li>
+                        <li><input type="checkbox">双鸭山</li>
+                        <li><input type="checkbox">哈尔滨</li>
+                        <li><input type="checkbox">牡丹江</li>
+                        <li><input type="checkbox">齐齐哈尔</li>
+                        <li><input type="checkbox">双鸭山</li>
+                        <li><input type="checkbox">哈尔滨</li>
+                        <li><input type="checkbox">牡丹江</li>
+                        <li><input type="checkbox">齐齐哈尔</li>
+                        <li><input type="checkbox">双鸭山</li>
+                    </ol>
+                </li>
+            </ul>
+
+        </div>
+        <div class="footer">
+            <button class="submit">确定</button>
+            <button class="close">关闭</button>
+        </div>
+    </div>
+
+</body>
+<script src=" ./lib/require.js" data-main="main"></script>
+
+</html>

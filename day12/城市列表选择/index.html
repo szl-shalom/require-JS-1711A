@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 400px;
+            margin: auto;
+            position: relative;
+        }
+
+        .wrap input {
+            width: 300px;
+            height: 40px;
+        }
+
+        .title {
+            border-bottom: 1px solid #ccc;
+            height: 40px;
+
+        }
+
+        .title span {
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+            width: 50px;
+        }
+
+        .underLine {
+            width: 50px;
+            position: absolute;
+            top: 79px;
+            left: 50px;
+            height: 1px;
+            background: red;
+            /* transition: left .5s; */
+        }
+
+        .content b {
+            color: blue;
+        }
+
+        .content span {
+            margin-left: 20px;
+            ;
+        }
+        .box{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <input type="text" class="search">
+        <div class="box">
+            <i class="underLine"></i>
+            <div class="title">
+                <span>热门</span>
+                <span>ABCD</span>
+                <span>EFGH</span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <b>A</b>
+                        <span>安庆市</span>
+                        <span>鞍山市</span>
+                    </li>
+                    <li>
+                        <b>A</b>
+                        <span>安庆市</span>
+                        <span>鞍山市</span>
+                    </li>
+                    <li>
+                        <b>A</b>
+                        <span>安庆市</span>
+                        <span>鞍山市</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

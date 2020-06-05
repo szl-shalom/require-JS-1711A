@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .userCode {
+            width: 50px;
+            float: left;
+        }
+
+        .code {
+            width: 50px;
+            height: 22px;
+            border: 1px solid #ccc;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="">
+            <input type="text" class="username" placeholder="请输入用户名">
+            <span></span>
+        </label></br>
+        <label for="">
+            <input type="text" class="password" placeholder="请输入密码">
+            <span></span>
+        </label></br>
+        <label for="">
+            <input type="text" class="repeatPassword" placeholder="请重复密码">
+            <span></span>
+        </label></br>
+        <label for="">
+            <input type="text" class="email" placeholder="请输入邮箱">
+            <span></span>
+        </label></br>
+        <label for="">
+            <input type="text" class="iphone" placeholder="留个手机号">
+            <span></span>
+        </label></br>
+        <label for="">
+            <input type="text" class="address" placeholder="留个地址">
+            <span></span>
+        </label></br>
+        <label for="">
+            <input type="text" class="userCode" placeholder="验证">
+            <span class="code">123e</span>
+            <button type="button" class="getCode">获取验证码</button>
+        </label></br>
+        <label for="">
+            <button type="button" class="submit">提交</button>
+        </label></br>
+    </form>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

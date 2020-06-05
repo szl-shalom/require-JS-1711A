@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 500px;
+            margin: auto;
+        }
+
+        .nav {
+            width: 500px;
+        }
+
+        .nav>li {
+            line-height: 45px;
+            width: 100px;
+            text-align: center;
+            float: left;
+            background: skyblue;
+            position: relative;
+        }
+
+        .nav>li>ol {
+            position: absolute;
+            top: 45px;
+            left: -30px;
+            width: 160px;
+            display: none;
+        }
+
+        .nav>li>ol::before {
+            width: 0;
+            height: 0;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-bottom: 15px solid #555;
+            display: block;
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .nav>li>ol>li {
+            width: 160px;
+            line-height: 45px;
+            text-align: center;
+            background: #555;
+        }
+
+        .nav>li>ol>li:hover {
+            background: #ccc;
+        }
+
+        .nav>li>ol>li {
+            width: 160px;
+            line-height: 45px;
+            text-align: center;
+            background: #555;
+            position: relative;
+        }
+
+        .three {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            display: none;
+        }
+
+        .three li {
+            width: 160px;
+            line-height: 45px;
+            text-align: center;
+            background: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="nav">
+            <li>
+                001
+                <ol>
+                    <li>00001
+
+                    </li>
+                    <li>00002</li>
+                    <li>
+                        00003
+
+                    </li>
+                    <li>00004
+                        <ul class="three">
+                            <li>000000001</li>
+                            <li>000000002</li>
+                            <li>000000003</li>
+                            <li>000000004</li>
+                            <li>000000005</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+            <li>002</li>
+            <li>003</li>
+            <li>004</li>
+            <li>005
+
+            </li>
+        </ul>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+    <script>
+    </script>
+</body>
+
+</html>

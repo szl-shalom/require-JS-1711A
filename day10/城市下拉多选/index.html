@@ -1,0 +1,83 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-12 11:22:32
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-12 14:57:00
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul li {
+            list-style: none;
+        }
+
+
+        ul {
+            display: none;
+        }
+
+        .content-ul{
+            height:500px;
+            width:300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <input type="text" class="search">
+    </div>
+    <ul class="content-ul">
+        <li>
+            <img src="./img/close.png" alt="">
+            <input type="checkbox">
+            <span>河北</span>
+            <ul class="child-ul">
+                <li>
+                    <input type="checkbox">
+                    <span>邯郸</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>唐山</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>石家庄</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <img src="./img/close.png" alt="">
+            <input type="checkbox">
+            <span>河北</span>
+            <ul class="child-ul">
+                <li>
+                    <input type="checkbox">
+                    <span>邯郸</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>唐山</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>石家庄</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <button class="submit">确定提交</button>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

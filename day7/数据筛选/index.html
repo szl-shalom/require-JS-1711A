@@ -1,0 +1,122 @@
+<!--
+ * @Description: This is a JS program !ript
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-08 10:24:20
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-08 10:52:45
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 800px;
+            margin: 100px auto;
+        }
+
+        .wrap .header input {
+            height: 35px;
+            width: 400px;
+
+        }
+
+
+        .wrap .header button {
+            height: 35px;
+            padding: 0 10px;
+            border: 0;
+        }
+
+        .wrap .header button.active {
+            background: red;
+        }
+
+        .content ul li {
+            height: 80px;
+            margin: 10px 0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .content ul li .left {
+            float: left;
+            width: 80px;
+            height: 80px;
+
+        }
+
+        .content ul li .left img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .content ul li .right {
+            padding: 10px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .content ul li .right p {
+            width:600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <input type="text">
+            <button class="active">全部</button>
+            <button>男生</button>
+            <button>女生</button>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="left">
+                        <img src="./images/1.jpeg" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>姓名</h2>
+                        <p>签名</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <img src="./images/1.jpeg" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>姓名</h2>
+                        <p>签名</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <img src="./images/1.jpeg" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>姓名</h2>
+                        <p>签名</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

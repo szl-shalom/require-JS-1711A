@@ -1,0 +1,93 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-03 19:32:40
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-03 19:46:58
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        .wrap {
+            width: 800px;
+            margin: auto;
+        }
+
+        .wrap .header {
+            height: 200px;
+            line-height: 200px;
+            background: red;
+        }
+
+        .wrap .nav {
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .wrap .nav.fixed {
+            position: fixed;
+            top: 0;
+        }
+
+        .wrap .nav ul {
+
+            height: 45px;
+            background: green;
+            ;
+        }
+
+        .wrap .nav ul li {
+            float: left;
+            width: 80px;
+            text-align: center;
+
+        }
+
+        .wrap .nav ul li:hover {
+            color: skyblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            qweqew
+        </div>
+        <div class="nav">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./lib/require.js" data-main="./main"></script>
+</body>
+
+</html>

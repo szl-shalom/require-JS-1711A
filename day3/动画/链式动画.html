@@ -1,0 +1,48 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-03 20:18:42
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-04 10:33:53
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script src="./lib/velocity.min.js"></script>
+    <script>
+        var V = Velocity, div = document.querySelector("div");
+
+        // 给相同相同元素添加动画 动画按照添加顺序依次执行
+        V(div, {
+            width: 300
+        })
+
+        V(div, {
+            height: 300
+        })
+
+        V(div, {
+            marginLeft: 500
+        })
+
+    </script>
+</body>
+
+</html>

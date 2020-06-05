@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        .box ul {
+            width: 600px;
+
+        }
+
+        .box ul li {
+            width: 200px;
+            height: 200px;
+            border: 1px solid palevioletred;
+            border-radius: 25px;
+            /* padding: 10px; */
+            float: left;
+        }
+
+        .box ul li span {
+            width:99px;
+            height:99px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .vegetable {
+            width: 100px;
+            float: right;
+            margin-right: 50px;
+        }
+
+        span {
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            display: block;
+            border: 1px solid skyblue;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="vegetable">
+        <span>土豆</span>
+        <span>西红柿</span>
+        <span>大包菜</span>
+        <span>牛肉</span>
+        <span>萝卜</span>
+        <span>木耳</span>
+        <span>银耳</span>
+        <span>茄子</span>
+        <span>羊肉</span>
+        <span>鸭血</span>
+    </div>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

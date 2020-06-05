@@ -1,0 +1,15 @@
+1.引入require
+<script src="./lib/require.js" data-main="./main"></script>
+
+2、 定义模块
+
+define(function(){
+    3、抛出模块
+    return 
+})
+
+4、引入模块
+require(["路径1"]，function(a){
+    //a是路径1文件抛出的接口
+
+})

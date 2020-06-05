@@ -1,0 +1,67 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-05 15:55:48
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-05 16:25:21
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 800px;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <input type="text" placeholder="请输入内容">
+            <input type="text" placeholder="发布人">
+            <input type="text" placeholder="日期">
+            <button class="submit">提交</button>
+        </div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>标题</th>
+                    <th>发布人</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>我是内容</td>
+                    <td>小三</td>
+                    <td>20148-1-1</td>
+                    <td>
+                        <button class="del">删除</button>
+                        <button class="mod">编辑</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div></div>    <script src="./lib/require.js" data-main="./main"></script>
+</body>
+
+</html>

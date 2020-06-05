@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 400px;
+            margin: auto;
+        }
+
+        ul li {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            position: relative;
+            float: left;
+            background: #555;
+        }
+
+        ul li ol {
+            position: absolute;
+            width: 300px;
+            top: 40px;
+            left: 0;
+            z-index: 999;
+        }
+
+        ul li ol li {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <input type="checkbox">
+            山西省
+            <!-- <ol>
+                <li>临汾</li>
+                <li>太远</li>
+                <li>123</li>
+                <li>1231</li>
+                <li>23</li>
+            </ol> -->
+        </li>
+        <li>山东省</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6
+            <ol>
+                <li>临汾</li>
+                <li>太远</li>
+                <li>123</li>
+                <li>1231</li>
+                <li>23</li>
+            </ol>
+        </li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10
+
+
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ["a", "b", "c", "d", "f", "a", "b", "c", "d", "f", "t"]
+        //           0    1   2    3    4    5    6    7    8    9     10
+
+        // 
+        var len = Math.ceil(arr.length / 2)
+        console.log(len)
+        var res = arr.slice(0, 2)   //0      2
+        console.log(res)
+        var res = arr.slice(2, 4)   //1   *  2
+        console.log(res)
+        var res = arr.slice(4, 6)    //2     2
+        console.log(res)
+        var res = arr.slice(6, 8)     //3    2
+        console.log(res)
+        var res = arr.slice(8, 10)   //4      2
+        console.log(res)
+        var res = arr.slice(10, 12)   //5     2
+        console.log(res)
+
+
+        // 分页器总个数
+        // Math.ceil（数据的长度 / 每一页显示的个数）
+
+        // 获取下标为n的数据
+        // data.slice( n * 每页显示的个数,  （n +1）* 每页显示的个数 )
+
+
+        // 总结：
+        // 获取分页器的长度
+        this.pageLen = Math.ceil(this.data.length / this.pageNum)
+        //根据下标this.index 获取对用的数据
+        var data = this.data.slice(this.index * this.pageNum, (this.index + 1) * this.pageNum)
+    </script>
+</body>
+
+</html>

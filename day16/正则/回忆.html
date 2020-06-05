@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 样式
+
+        //      /正则表达式主体/[修饰符]
+
+        var reg = /1/
+        // 修饰符
+
+        // g全局匹配
+        // m多行匹配
+        // i忽略大小写
+
+        // \d === [0-9]
+        // \w === [0-9a-zA-Z_]
+        // \s 空格
+        // . 匹配任意字符
+        // \D === [^0-9] 不是数字
+
+        //   /^     $/ 匹配开头和结尾
+
+        //  /a{1}/ 匹配一个字符a
+        //  /a{1,}/   === /a+/  匹配至少一个a
+        //  /a{1,3}/ 匹配1-3个之间的a
+
+        // + 至少一个
+        // * 随便
+        // ？0个或1个
+
+        // 手机正则
+        // var regIphone = /^1[1-9]\d{9}$/
+        // // 邮箱
+        // var regEmail = new RegExp(/^\w+@\w+\.(com|con|net|qweqwe)$/)
+        // // 汉字
+        // var regName = /^[\u4e00-\u9fa5]{2,4}$/
+
+        // console.log(regIphone.test("13171996138"))
+        // console.log(regEmail.test("12343456456@qq.com"))
+        // console.log(regName.test("钱我"))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>姓名</h1>
+        <input type="text" class="username">
+        <h1>年龄</h1>
+        <input type="text" class="age"></br>
+        <button class="submit">提交</button>
+        <button class="reset">重置</button>
+        <h1></h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>18</td>
+                    <td>
+                        <button class="del"> 删除</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <button class="del-all">删除全部</button>
+                    </td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

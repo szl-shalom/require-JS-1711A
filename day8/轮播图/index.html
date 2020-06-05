@@ -1,0 +1,139 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-09 08:51:56
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-09 10:41:44
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-wrapper {
+            width: 1200px;
+            height: 600px;
+            margin: 150px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .swiper-container {
+            width: 3600px;
+            height: 600px;
+            position: absolute;
+            /* left: -600px */
+        }
+
+        .swiper-slide {
+            width: 1200px;
+            height: 600px;
+            float: left;
+        }
+
+        .swiper-slide img {
+            width: 1200px;
+            height: 600px;
+        }
+
+        .page {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .page li {
+            list-style: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: green;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .page li.active {
+            background: red;
+        }
+
+        .prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            height: 220px;
+            width: 80px;
+            text-align: center;
+            font-size: 72px;
+            color: white;
+            background: transparent;
+            border: 0;
+        }
+
+        .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            height: 220px;
+            width: 80px;
+            text-align: center;
+            font-size: 72px;
+            color: white;
+            background: transparent;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-wrapper">
+        <div class="swiper-container">
+            <div class="swiper-slide">
+                <img src="./images/1.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/4.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/5.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/6.jpg" alt="">
+            </div>
+
+
+        </div>
+        <ul class="page">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

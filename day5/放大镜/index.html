@@ -1,0 +1,85 @@
+<!--
+ * @Description: This is a JS program !sc
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-06 16:14:53
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-06 20:36:38
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            float: left;
+        }
+
+        .left img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left .mask {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .7);
+            display: none;
+        }
+        .left .mask.active {
+            display: block;
+        }
+
+        .right {
+            width: 500px;
+            height: 500px;
+            float: left;
+            display: none;
+            overflow: hidden;
+        }
+
+        .right.active {
+            display: block;
+        }
+
+        .right img {
+            width: 2500px;
+            height: 2500px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left">
+            <img src="../手风琴/images/1.jpeg" alt="">
+            <div class="mask"></div>
+        </div>
+
+
+        <div class="right">
+            <img src="../手风琴/images/1.jpeg" alt="">
+        </div>
+    </div>
+
+
+
+    <script src="../手风琴/lib/require.js" data-main="main"></script>
+</body>
+
+</html>

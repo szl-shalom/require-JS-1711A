@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 1200px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 600px;
+            width: 6000px
+        }
+
+        .container img {
+            height: 600px;
+            width: 1200px;
+            float: left;
+        }
+
+        .page {
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+        }
+
+        .page li {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .7);
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .page li.active {
+            background: red;
+        }
+
+        .prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            height: 220px;
+            width: 80px;
+            text-align: center;
+            line-height: 220px;
+            font-size: 32px;
+            color: white;
+            background: rgba(0, 0, 0, .3);
+            border: 0;
+            display: none;
+        }
+
+        .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            height: 220px;
+            width: 80px;
+            text-align: center;
+            line-height: 220px;
+            font-size: 32px;
+            color: white;
+            background: rgba(0, 0, 0, .3);
+            border: 0;
+            display: none;
+
+        }
+
+        .prev.active,
+        .next.active {
+            display: block;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <!-- <img src="./images/1.jpeg" alt="">
+            <img src="./images/2.jpg" alt="">
+            <img src="./images/3.jpg" alt="">
+            <img src="./images/4.jpeg" alt="">
+            <img src="./images/5.jpg" alt=""> -->
+        </div>
+        <ul class="page">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button class="prev">
+            <</button> <button class="next">>
+        </button>
+    </div>
+    <script src="./lib/require.js" data-main="./main"></script>
+</body>
+
+</html>

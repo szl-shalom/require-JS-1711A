@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <i class="border"></i>
+            <h2>
+                <span>####</span>
+                <span>####</span>
+                <span>####</span>
+                <span>####</span>
+            </h2>
+            <span class="username">签名</span>
+            <span class="date">日期</span>
+        </div>
+        <div class="card card1 active">
+            <input type="text" placeholder="请输入签名" class="cvv1">
+        </div>
+        <div class="content">
+            <form>
+                <label for="">
+                    <h3>卡号</h3>
+                    <input type="number" class="cardNumber">
+                </label>
+                <label for="">
+                    <h3>姓名</h3>
+                    <input type="text" class="username1">
+                </label>
+                <label for="">
+                    <h3>到期时间
+                        <span style="float: right;">cvv认证</span>
+                    </h3>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                    <input type="text" class="cvv">
+                </label>
+                <label for="">
+                    <button class="submit" type="button">申请信用卡</button>
+                </label>
+            </form>
+        </div>
+    </div>
+    <script>
+        var cardNumber = document.querySelector(".cardNumber"),
+            username = document.querySelector(".username"),
+            username1 = document.querySelector(".username1"),
+            border = document.querySelector(".border"),
+            h2 = document.querySelector("h2"),
+            sels = document.querySelectorAll("select"),
+            cvv = document.querySelector(".cvv"),
+            card = document.querySelector(".card");
+        card1 = document.querySelector(".card1");
+
+
+        cardNumber.onfocus = function () {
+            go(h2)
+        }
+
+        cardNumber.oninput = function () {
+            if (this.value.length > 16) {
+                this.value = this.value.slice(0,16)
+                return
+            }
+            var arr = new Array(16).fill("#")
+            for (var i = 0; i < this.value.length; i++) {
+                arr[i] = this.value[i]
+            }
+            var str = ``;
+            while (arr.length) {
+                str += `<span>${arr.splice(0, 4).join("")}</span>`
+            }
+            h2.innerHTML = str;
+        }
+
+        username1.onfocus = function () {
+            go(username)
+        }
+        username1.oninput = function () {
+            username.innerHTML = this.value
+            username1.onfocus()
+        }
+
+        sels.forEach(function (item) {
+            item.onfocus = function () {
+                go(document.querySelector(".date"))
+            }
+        })
+
+        cvv.onfocus = function () {
+            card.classList.add("active")
+            setTimeout(function () {
+                card1.classList.remove("active")
+            }, 500)
+        }
+
+        cvv.onblur = function () {
+            card1.classList.add("active")
+            setTimeout(function () {
+                card.classList.remove("active")
+            }, 500)
+        }
+        cvv.oninput = function(){
+            document.querySelector(".cvv1").value = this.value
+        }
+
+        function go(cardNumber) {
+            border.style.left = cardNumber.offsetLeft + "px"
+            border.style.top = cardNumber.offsetTop + "px"
+            border.style.width = cardNumber.offsetWidth + "px"
+            border.style.height = cardNumber.offsetHeight + "px"
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

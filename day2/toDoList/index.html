@@ -1,0 +1,83 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-01 19:41:22
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-02 09:40:05
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 800px;
+            margin: 150px auto;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .middle>span,
+        .footer>span {
+            float: right;
+        }
+
+        .middle>ul>li>span:last-child,
+        .footer>ul>li>span:last-child {
+            float: right;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <input type="text">
+        </div>
+        <div class="middle">
+            <span>1</span>
+            <h1>正在进行</h1>
+            <ul>
+                <li>
+                    <input type="checkbox">
+                    <span>1231</span>
+                    <span class="del">X</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>1231</span>
+                    <span class="del">X</span>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <span>1231</span>
+                    <span class="del">X</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <span>1</span>
+            <h1>已经进行</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" checked>
+                    <span>1231</span>
+                    <span class="del">X</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="./lib/require.js" data-main="./main"></script>
+</body>
+
+</html>

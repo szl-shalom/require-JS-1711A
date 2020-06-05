@@ -1,0 +1,143 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-07 10:56:02
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-07 11:42:36
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        span.active {
+            background: red;
+        }
+
+        p {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        p {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        p.active {
+            background: red;
+        }
+
+        .content div {
+            display: none;
+        }
+
+        .content div.active {
+            display: block;
+        }
+
+        .left{
+            width:50px;
+            display: inline-block;
+        }
+
+        .underLine{
+            position: absolute;
+            width:2px;
+            height:60px;
+            background: red;;
+            left:55px;
+            top:0;
+        }
+
+        .wrap{
+            position: relative;
+        }
+
+        .content1{
+            margin-left: 20px;
+            display: inline-block;
+            
+        }
+
+        .content1 div{
+      
+            display: none;
+            
+        }
+
+        .content1 div.active{
+            
+            display: block;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <span class="active" ind="0">1</span>
+            <span ind="1">2</span>
+            <span ind="2">3</span>
+            <span ind="3">4</span>
+            <span ind="4">5</span>
+        </div>
+        <div class="content">
+            <div class="active">001</div>
+            <div>002</div>
+            <div>003</div>
+            <div>004</div>
+            <div>005</div>
+        </div>
+    </div>
+
+
+    <div class="wrap">
+        <div class="header1">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+        </div>
+    </div>
+
+
+    <div class="wrap" style="width:500px;">
+        <div class="left">
+            <span ind="0">1</span>
+            <span ind="1">2</span>
+            <span ind="2">3</span>
+        </div>
+        <div class="underLine"></div>
+        <div class="content1">
+            <div>00001</div>
+            <div>00002</div>
+            <div>00003</div>
+        </div>
+        
+    </div>
+
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

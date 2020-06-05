@@ -1,0 +1,23 @@
+1、什么是模块
+一个JS文件就是一个模块
+
+2、什么是模块化
+就是将一个复杂的系统，拆分成简单的模块，
+每个模块都有一个独立小功能,在将每个模块按照一定的规则组件起来
+
+3、模块化的好处
+    A、解决命名冲突问题
+    B、解决文件依赖问题
+    C、高度维护性
+    D、高度复用性等等
+
+4、如何实现模块化？
+    立即执行函数
+
+5、规范
+    AMD(require.js) 异步模块加载机制 asynchronous module definition  重点
+    CMD(sea.js) common module definition
+    common(node.js)
+
+6、本月的重点是模块拆分
+

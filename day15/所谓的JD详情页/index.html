@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 1600px;
+            margin: auto;
+        }
+
+        .left {
+            width: 600px;
+            float: left;
+        }
+
+        .left .box {
+            width: 600px;
+            height: 600px;
+            position: relative;
+        }
+
+
+        .left .box .con {
+            width: 600px;
+            height: 600px;
+        }
+
+        .left .box .con-right {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 600px;
+            height: 600px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .left .box .con-right img {
+            width: 3600px;
+            height: 3600px;
+        }
+
+        .left .box .con img {
+            width: 600px;
+            height: 600px;
+        }
+
+        .left .box .con .mask {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            background: rgba(255, 0, 0, .3);
+            display: none;
+        }
+
+        .right {
+            width: 900px;
+            float: left;
+        }
+
+        .banner {
+            width: 600px;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 400px;
+            float: left;
+            overflow: hidden;
+            height: 100px;
+        }
+
+        .container .content {
+            width: 20000px;
+            height: 100px;
+        }
+
+        .container img {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .container img.active {
+            border: 2px solid #ccc;
+        }
+
+        .prev,
+        .next {
+            width: 100px;
+            float: left;
+            height: 100px;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        span.active {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="box">
+                <div class="con">
+                    <img src="./images/1.jpeg" alt="">
+                    <div class="mask"></div>
+                </div>
+                <div class="con-right">
+                    <img src="./images/1.jpeg" alt="">
+                </div>
+            </div>
+
+            <div class="banner">
+                <button class="prev">
+                    <</button> <div class="container">
+                        <div class="content">
+                            <img src="./images/1.jpeg" alt="">
+                            <img src="./images/2.jpg" alt="">
+                            <img src="./images/3.jpg" alt="">
+                            <img src="./images/4.jpeg" alt="">
+                            <img src="./images/5.jpg" alt="">
+                            <img src="./images/1.jpeg" alt="">
+                            <img src="./images/2.jpg" alt="">
+                            <img src="./images/3.jpg" alt="">
+                            <img src="./images/4.jpeg" alt="">
+                            <img src="./images/5.jpg" alt="">
+                            <img src="./images/1.jpeg" alt="">
+                            <img src="./images/2.jpg" alt="">
+                            <img src="./images/3.jpg" alt="">
+                            <img src="./images/4.jpeg" alt="">
+                            <img src="./images/5.jpg" alt="">
+                            <img src="./images/1.jpeg" alt="">
+                            <img src="./images/2.jpg" alt="">
+                            <img src="./images/3.jpg" alt="">
+                            <img src="./images/4.jpeg" alt="">
+                            <img src="./images/5.jpg" alt="">
+                        </div>
+            </div>
+            <button class="next">></button>
+        </div>
+    </div>
+    <div class="right">
+        <h2>优惠券</h2>
+        <div class="every">
+            <span class="active">400</span>
+            <span>500</span>
+            <span>600</span>
+        </div>
+        <h2>尺码</h2>
+        <div class="every">
+            <span>34</span>
+            <span>35</span>
+            <span>36</span>
+            <span>38</span>
+            <span>40</span>
+            <span>42</span>
+        </div>
+        <h2>分期</h2>
+        <div class="every">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+        </div>
+    </div>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+</body>
+
+</html>

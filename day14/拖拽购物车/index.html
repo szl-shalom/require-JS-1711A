@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .left,
+        .right {
+            float: left;
+            height: 650px;
+        }
+
+        .left {
+            width: 70%
+        }
+
+        .right {
+            width: 30%;
+            background: #cccc
+        }
+
+        dl {
+            float: left;
+            width: 160px;
+            border: 1px solid;
+            margin-left: 5px;
+        }
+
+        dd p {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <!--<dl>
+            <dt><img src="img/shirt1.gif" alt=""></dt>
+            <dd><p>adi</p><p>$100</p></dd>
+        </dl>-->
+    </div>
+    <div class="right">
+        <h2>购物车列表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>名称</td>
+                    <td>单价</td>
+                    <td>数量</td>
+                    <td>小计</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">总量<b class="qty">0</b> 总金额<b class="amt">0</b></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+<script src="./lib/require.js" data-main="./main.js"></script>
+
+</html>

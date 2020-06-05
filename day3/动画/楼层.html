@@ -1,0 +1,89 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-03 20:18:42
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-04 11:41:34
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            line-height: 300px;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        div:nth-child(odd) {
+            background: red;
+        }
+
+        div:nth-child(even) {
+            background: green;
+        }
+
+        ul {
+            position: fixed;
+            top: 50%;
+            left: 50px;
+            transform: translate(0, -50%);
+            width: 80px;
+
+        }
+
+        ul li {
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        ul li.active {
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script src="./lib/velocity.min.js"></script>
+    <script>
+        var divs = document.querySelectorAll("div");
+        var V = Velocity, div = document.querySelectorAll("div");
+        [...document.querySelectorAll("li")].forEach(function (item, index) {
+            item.onclick = function () {
+                document.querySelector(".active") &&  document.querySelector(".active").classList.remove("active")
+                V(divs[index], "scroll")
+                item.classList.add("active")
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

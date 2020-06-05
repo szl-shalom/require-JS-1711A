@@ -1,0 +1,128 @@
+<!--
+ * @Description: This is a JS program !
+ * @Author: 史志龙
+ * @Github: https://github.com/szl-shalom/
+ * @Date: 2019-11-06 10:22:37
+ * @LastEditors: 史志龙
+ * @LastEditTime: 2019-11-06 11:38:23
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <button>点我</button>
+        <div class="header">123123</div>
+        <div class="content">
+            <div class="left">
+                <h2>1231231</h2>
+                <h2>23123</h2>
+            </div>
+            <div class="right">
+                <p>
+                    <span>123</span>
+                    <span>12312</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/require.js" data-main="main"></script>
+
+    <script>
+        //对象
+        // 是一组无序的属性集合
+        // 创建对象
+        // var obj = {} //字面量
+        // var obj1 = new Object() //构造函数
+        // console.log(obj, obj1)
+        var name = "李四"
+        var obj = {
+            name: "张三",
+            age: 13,
+            say: () => {
+                console.log(this.name)
+            }
+        }
+        // obj.say()
+        //对象：
+        // 属性名和属性值之间  中间用：
+        // 键值对于键值对之间 用,隔开
+        // 对象增删改查
+
+
+        // 1、添加属性
+        obj.sex = "男" // 方式一 .运算符
+        // obj["sex"] = "男" // 方式二 []运算符
+
+        // 区别  方式二比方式一强大  方式二可以识别非法字符
+
+
+        // 修改 
+
+
+        // 删除 
+        delete obj.sex
+
+        // console.log(obj)
+
+
+
+
+        // object.assign(this,{所谓的默认参数},opt)
+
+        //  {
+        //     index:2
+        //  }
+
+        //  {
+        //      index:1
+        //  }
+
+        //  {
+        //      index:2
+        //  }
+        // var obj = {}
+        // Object.assign(obj, {
+        //     index: 1,
+        //     aa: 11
+        // }, {
+        //     index: 2,
+        //     bb: 22
+        // })
+        // console.log(obj)
+        // {
+        //     index:2,
+        //     aa:11,
+        //     bb:22
+        // }
+        // 合拼
+
+
+
+        // 152
+        // var num = 153  
+        // 获取最高位  parseInt(153 / 100)  => 1
+        // 获取最低位  parseInt(153 % 10)  => 3
+        // 中间位      parseInt(153 / 10 % 10) =>5
+
+        //毫秒数字  var str = 98546354654654ms
+        // sec = str / 1000 % 60  秒
+        // min = str / 1000 / 60 % 60 分钟 
+        // hour = str / 1000 / 60 / 60 % 24 小时 
+        // hour = str / 1000 / 60 / 60 / 24 小时 
+
+        
+            
+
+
+    </script>
+</body>
+
+</html>
